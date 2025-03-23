@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/" class="button">
+    <router-link to="/color-commotion" class="button">
       {{ btn_text }}
     </router-link>
   </div>

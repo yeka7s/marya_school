@@ -1,18 +1,16 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
-  <HomeView></HomeView>
-  <!-- <router-view/> -->
+  <router-link to="/">Home</router-link>
+  <router-view/>
 </template>
 
 <script>
 import HomeView from '@/views/HomeView.vue'
+import ColorCommotionView from '@/views/ColorCommotionView.vue'
 export default {
   name: 'App',
   components: {
     HomeView,
+    ColorCommotionView,
   }
 }
 </script>
