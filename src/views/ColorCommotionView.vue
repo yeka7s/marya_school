@@ -1,12 +1,13 @@
 <template>
     <div class="color-commotion">
-      <h1 v-if="!isFinished">Цветной переполох</h1>
-      <div v-if="!isFinished">
-        <CardComponent :card="currentCard" />
-        <ColorPicker />
-        <MessageComponent />
-      </div>
-      <div v-else class="finish-message">
+        <LevelSelector v-if="!startGame" />
+        <div v-else>
+            <h1>Цветной переполох</h1>
+            <CardComponent :card="currentCard" />
+            <ColorPicker />
+            <MessageComponent />
+        </div>
+      <div v-if="isFinished" class="finish-message">
         <h2>Ты молодец!</h2>
         <button @click="resetGame">Начать заново</button>
       </div>
@@ -17,6 +18,7 @@
   import CardComponent from '../components/ColorCommotionCardComponent.vue'
   import ColorPicker from '../components/ColorCommotionColorPicker.vue'
   import MessageComponent from '../components/MessageComponent.vue'
+  import LevelSelector from '../components/LevelSelectorComponent.vue'
   import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
   
   export default {
@@ -24,8 +26,10 @@
       CardComponent,
       ColorPicker,
       MessageComponent,
+      LevelSelector,
     },
     computed: {
+      ...mapState('ColorCommotion', ['currentLevel', 'startGame']),
       currentCard() {
         console.log('this.$store.state.cards :>> ', this.$store.state.ColorCommotion.cards);
         return this.$store.state.ColorCommotion.cards[this.$store.state.ColorCommotion.currentCardIndex]

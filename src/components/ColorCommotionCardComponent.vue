@@ -15,12 +15,14 @@
         required: true,
       },
     },
-  };
+  }
   </script>
   
   <style scoped lang="scss">
   .card {
     width: 70%;
+    min-width: max-content;
+    padding: 0 20px;
     height: 300px;
     display: flex;
     justify-content: center;

@@ -1,13 +1,27 @@
 const colors = ['red', 'yellow', 'blue', 'green']
+
+const levels = {
+  easy: ['red', 'yellow', 'blue'], // Легкий уровень (3 цвета)
+  medium: ['red', 'yellow', 'blue', 'green', 'orange'], // Средний уровень (5 цветов)
+  hard: ['red', 'yellow', 'blue', 'green', 'orange', 'purple', 'pink', 'brown', 'gray', 'black'], // Сложный уровень (10 цветов)
+}
+
 const colorTranslations = {
   red: 'красный',
   yellow: 'желтый',
   blue: 'синий',
   green: 'зеленый',
+  orange: 'оранжевый',
+  purple: 'фиолетовый',
+  pink: 'розовый',
+  brown: 'коричневый',
+  gray: 'серый',
+  black: 'черный',
 }
 
 // Генерация 15 вариантов карточек
-const generateCards = () => {
+const generateCards = (level) => {
+  const colors = levels[level]
   const cards = [];
   let previousTextColor = null // Храним предыдущий текст
 
@@ -37,11 +51,13 @@ const generateCards = () => {
 export default {
   namespaced: true,
   state: {
-    cards: generateCards(), // Список карточек
+    cards: generateCards('easy'), // Список карточек
     currentCardIndex: 0, // Индекс текущей карточки
     selectedColor: null, // Выбранный цвет
     isCorrect: null, // Правильный ли выбор
     isFinished: false, // Закончен ли тренажер
+    currentLevel: 'easy', // Текущий уровень сложности
+    startGame: false,
   },
   getters: {
   },
@@ -66,11 +82,22 @@ export default {
       }
     },
     resetGame(state) {
-      state.cards = generateCards()
+      state.cards = generateCards(state.currentLevel)
       state.currentCardIndex = 0
       state.selectedColor = null
       state.isCorrect = null
       state.isFinished = false
+      state.startGame = false
+
+    },
+    setLevel(state, level) {
+      state.currentLevel = level
+      state.cards = generateCards(level) // Генерация карточек для нового уровня
+      state.currentCardIndex = 0 // Сброс индекса карточки
+      state.selectedColor = null // Сброс выбранного цвета
+      state.isCorrect = null // Сброс статуса правильности
+      state.isFinished = false // Сброс статуса завершения
+      state.startGame = true
     },
   },
   actions: {
@@ -83,6 +110,9 @@ export default {
           commit('nextCard')
         }, 1000); // Задержка перед переходом к следующей карточке
       }
+    },
+    setLevel({ commit }, level) {
+      commit('setLevel', level);
     },
   },
 }

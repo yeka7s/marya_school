@@ -1,7 +1,7 @@
 <template>
     <div class="color-picker">
       <div
-        v-for="color in colors"
+        v-for="color in availableColors"
         :key="color"
         class="color-circle"
         :style="{ backgroundColor: color }"
@@ -11,18 +11,27 @@
   </template>
   
   <script>
+  import { mapState } from 'vuex'
+
   export default {
-    data() {
-      return {
-        colors: ['red', 'yellow', 'blue', 'green'],
-      }
+    computed: {
+        ...mapState('ColorCommotion', ['currentLevel']),
+        availableColors() {
+        // Получаем цвета для текущего уровня из хранилища
+        const levels = {
+            easy: ['red', 'yellow', 'blue'],
+            medium: ['red', 'yellow', 'blue', 'green', 'orange'],
+            hard: ['red', 'yellow', 'blue', 'green', 'orange', 'purple', 'pink', 'brown', 'gray', 'black']
+        }
+        return levels[this.currentLevel] || []
+        }
     },
     methods: {
       selectColor(color) {
         this.$store.dispatch('ColorCommotion/selectColor', color)
       },
     },
-  };
+  }
   </script>
   
   <style scoped>
@@ -34,8 +43,8 @@
   }
   
   .color-circle {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 2px 2px 0px black;
