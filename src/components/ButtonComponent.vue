@@ -23,7 +23,7 @@ export default {
     display: inline-block;
     margin-top: 6vh;
     text-align: center;
-    font-size: 7rem;
+    font-size: 5rem;
     line-height: 100%;
     background-color: #fff;
 }

@@ -22,14 +22,14 @@
     margin-bottom: 20px;
 
     &__btn {
-      margin: 0 15px;
+      margin: 15px;
       padding: 10px 18px;
       border: none;
       border-radius: 10px;
       box-shadow: 2px 2px 0px #a8a8a8;
       color: #fff;
       text-shadow: 1px 1px 1px #1b1b1b;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       font-weight: 600;
       cursor: pointer;
       &:hover {

@@ -32,5 +32,16 @@ export default {
   max-width: 1600px;
   margin: 0 auto;
 }
+html {
+  @media (max-width: 1024px) {
+    font-size: 13px;
+  }
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+  @media (max-width: 550px) {
+    font-size: 7px;
+  }
+}
 
 </style>

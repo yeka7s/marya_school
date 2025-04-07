@@ -1,6 +1,6 @@
 <template>
     <div>
-      <router-link to="/" class="trans-button" @click="resetGame"><img class="logo" alt="logo" src="/img/icons/back_arrow.png">В начало</router-link>
+      <router-link to="/" class="trans-button" @click="resetGame"><img alt="logo" src="/img/icons/back_arrow.png">В начало</router-link>
     </div>
     <div class="color-commotion">
         <h1 class="rainbow-text">Цветной переполох</h1>
@@ -96,7 +96,7 @@
     width: max-content;
     cursor: pointer;
     & img {
-        height: 60px;
+        width: 4rem;
     }
     &:hover {
       transform: scale(1.1);
@@ -113,7 +113,7 @@
   background-clip: text;
   color: transparent;
   animation: rainbow 10s ease infinite;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 @keyframes rainbow {
@@ -131,10 +131,10 @@
     flex-wrap: wrap;
     color: #fff;
     text-shadow: 2px 2px 0px black;
-    font-size: 4em;
+    font-size: 4rem;
 
     &__item {
-        padding: 0 0.5em 0.1em;
+        padding: 0 1.5rem 0.5rem;
         border-radius: 20px;
         box-shadow: 2px 2px 13px #5f5d5d;
     }
@@ -143,14 +143,14 @@
         display: flex;
         justify-content: center;
         gap: 10px;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         align-items: center;
         font-weight: bold;
         color: #696363;
         margin: 30px 0;
 
         & img {
-          width: 40px;
+          width: 2.5rem;
         }
     }
 }

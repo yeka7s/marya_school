@@ -20,7 +20,12 @@ export default {
   padding: 50px;
 }
 .logo {
-  border-radius: 30px
+  border-radius: 30px;
+  width: 20%;
+}
+
+@media (max-width: 1024px) {
+  
 }
 
 </style>

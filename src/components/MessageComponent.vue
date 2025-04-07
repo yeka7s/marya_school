@@ -23,7 +23,7 @@
   .message {
     margin-top: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: red;
 
     &__icon {

@@ -37,14 +37,15 @@
   <style scoped>
   .color-picker {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
   }
   
   .color-circle {
-    width: 80px;
-    height: 80px;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 2px 2px 0px black;

@@ -23,7 +23,7 @@
     width: 70%;
     min-width: max-content;
     padding: 0 20px;
-    height: 300px;
+    height: 17rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@
     &__text {
         color: #f7f1f1;
         text-shadow: 2px 2px 0px black;
-        font-size: 12em;
+        font-size: 7rem;
     }
   }
   </style>
