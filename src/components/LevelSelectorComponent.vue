@@ -14,7 +14,7 @@
     methods: {
       ...mapActions('ColorCommotion', ['setLevel']), // Маппинг действия
     },
-  };
+  }
   </script>
   
   <style scoped>

@@ -1,5 +1,4 @@
-<template>
-  <router-link to="/">Home</router-link>
+<template>  
   <router-view/>
 </template>
 
@@ -16,8 +15,16 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'Nunito-Medium';
+  src: url('@/assets/fonts/Nunito-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito-Medium';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -29,7 +36,9 @@ export default {
   margin: 0 auto;
 }
 
-body {
-  background-color: #f8ddc4;
-}
+// body {
+//   background-color: #f8ddc4;
+// }
+
+
 </style>
