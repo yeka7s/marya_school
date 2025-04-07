@@ -29,16 +29,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-.container {
-  width: 1264px;
+  max-width: 1600px;
   margin: 0 auto;
 }
-
-// body {
-//   background-color: #f8ddc4;
-// }
-
 
 </style>
