@@ -1,8 +1,6 @@
 <template>
-    <div>
-        <router-link to="/" class="trans-button" @click="resetGame"><img alt="logo"
-                src="@/assets/img/icons/back_arrow.png">В начало</router-link>
-    </div>
+      <BackHomeBtnComponent/>
+
     <div class="memory-game">
         <h1>Memory Game</h1>
         <button @click="restartGame" class="restart-btn">Новая игра</button>
@@ -17,6 +15,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import BackHomeBtnComponent from '../components/BackHomeBtnComponent.vue'
+
 
 const symbols = ['🍎', '🍊', '🍇', '🍓', '🍋', '🍉', '🍒', '🍍', '🍎', '🍊', '🍇', '🍓', '🍋', '🍉', '🍒', '🍍'];
 const cards = ref([]);

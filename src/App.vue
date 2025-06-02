@@ -33,6 +33,7 @@ export default {
   color: #2c3e50;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 html {
   @media (max-width: 1024px) {
