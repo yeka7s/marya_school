@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/color-commotion" class="button">
+    <router-link :to="path" class="button">
       {{ btn_text }}
     </router-link>
   </div>
@@ -26,5 +26,10 @@ export default {
     font-size: 5rem;
     line-height: 100%;
     background-color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 }
 </style>

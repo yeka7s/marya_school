@@ -1,13 +1,13 @@
 <template>
     <div>
-      <router-link to="/" class="trans-button" @click="resetGame"><img alt="logo" src="/img/icons/back_arrow.png">В начало</router-link>
+      <router-link to="/" class="trans-button" @click="resetGame"><img alt="logo" src="@/assets/img/icons/back_arrow.png">В начало</router-link>
     </div>
     <div class="color-commotion">
         <h1 class="rainbow-text">Цветной переполох</h1>
         <transition name="fade" v-if="step===1">
             <LevelSelector v-if="!startGame" />
             <div v-else>
-              <p class="color-list__description"><img class="info-icon" alt="info" src="/img/icons/info.png">Прочитай по порядку</p>
+              <p class="color-list__description"><img class="info-icon" alt="info" src="@/assets/img/icons/info.png">Прочитай по порядку</p>
               <div class="color-list">
                   <div
                     class="color-list__item"
@@ -16,7 +16,7 @@
                   </div>
               </div>
               <div>
-                <div @click="step=2" class="trans-button next-step"><img class="next-step__img" src="/img/icons/back_arrow.png" alt="">Далее</div>
+                <div @click="step=2" class="trans-button next-step"><img class="next-step__img" src="@/assets/img/icons/back_arrow.png" alt="">Далее</div>
                 </div>
               </div>
         </transition>
