@@ -5,11 +5,13 @@
 <script>
 import HomeView from '@/views/HomeView.vue'
 import ColorCommotionView from '@/views/ColorCommotionView.vue'
+import MemoryView from '@/views/MemoryView.vue'
 export default {
   name: 'App',
   components: {
     HomeView,
     ColorCommotionView,
+    MemoryView,
   }
 }
 </script>

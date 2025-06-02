@@ -18,15 +18,13 @@ export default {
 
 <style scoped lang="scss">
 .button {
-  padding: 45px 35px;
-    border-radius: 30px;
     display: inline-block;
-    margin-top: 6vh;
+    margin-top: 3vh;
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 100%;
-    background-color: #fff;
     text-decoration: none;
+    color: hsl(208, 94%, 26%);
 
     &:hover {
       transform: scale(1.1);

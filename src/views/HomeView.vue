@@ -2,6 +2,7 @@
   <div class="home">
     <img class="logo" alt="logo" src="../assets/img/i.webp">
     <ButtonComponent btn_text="Цветной переполох" path="/color-commotion"/>
+    <ButtonComponent btn_text="Мемори" path="/memory"/>
   </div>
 </template>
 
